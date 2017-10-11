@@ -1,61 +1,62 @@
-!  Colour Scheme
-
-*background: #1D2426
-*foreground: #5f767c
-!*foreground: #8FA388
-*cursorColor: #513e4d
-
-!black
-*color0:  #39474A
-*color8:  #4C5F63
-!red
-*color1:  #a54242
-*color9:  #cc6666
-!green
-*color2:  #315c2b
-*color10: #7fb069
-!yellow
-*color3:  #C89A7B
-*color11: #BA9378
-!blue
-*color4:  #313b72
-*color12: #81a2be
-!magenta
-*color5:  #85678f
-*color13: #b294bb
-!cyan
-*color6:  #598392
-*color14: #979dbf
-!white
-*color7:  #707880
-*color15: #c5c8c6
-
-
-!  Style
-
-! Set the scroll bar: rxvt, plain, next, xterm
-URxvt.scrollstyle: rxvt
-! Disabled
 URxvt.scrollBar: false
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.autohint:   true 
+Xft.lcdfilter:  lcddefault
 
+! Using XLFD (created via e.g. xfontsel)
+!URxvt*font:           -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
+! Using Xft
+URxvt*font:           xft:Inconsolata:size=9
 
-!  Font
-
-URxvt*font: xft:Inconsolata:size=8, xft:wqy-zenhei
-Xft*dpi:       96
-Xft*antialias: True
-Xft*hinting:   Full
-
-
-!  Perl Extensions
-
-URxvt.perl-ext-common:	default,clipboard,matcher,keyboard-select
-URxvt.keysym.M-u:	perl:url-select:select_next
-URxvt.url-launcher:	/usr/bin/firefox
-URxvt.underlineURLs:	True
-URxvt.matcher.button:	1
-URxvt.keysym.M-Escape:	perl:keyboard-select:active
-URxvt.keysym.M-c:	perl:clipboard:copy
-URxvt.keysym.M-v:	perl:clipboard:paste
-URxvt.keysym.M-C-v:	perl:clipboard:paste_escaped
+!-*- Perl extensions -*-
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.url-launcher:   /usr/bin/firefox
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1 
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.Control-Shift-V:     perl:pasta:paste
+! Comment this if you dont want copy when text is selected
 URxvt.clipboard.autocopy: true
+
+! nichijou colours
+! special
+*.foreground:   #ffffff
+*.background:   #121212
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #232323
+*.color8:       #343434
+
+! red
+*.color1:       #994444
+*.color9:       #bc6767
+
+! green
+*.color2:       #668866
+*.color10:      #89a589
+
+! yellow
+*.color3:       #eebb66
+*.color11:      #ffd693
+
+! blue
+*.color4:       #446c88
+*.color12:      #698aa1
+
+! magenta
+*.color5:       #ee7777
+*.color13:      #ffa6a6
+
+! cyan
+*.color6:       #468b8b
+*.color14:      #6faaaa
+
+! white
+*.color7:       #dddddd
+*.color15:      #efefef
